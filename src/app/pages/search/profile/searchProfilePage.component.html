@@ -1,0 +1,46 @@
+<!-- Toolbar -->
+<app-toolbar [title]="title"></app-toolbar>
+
+
+<div class="app-content  animate-opacity" role="main">
+  <div class="hasBoth">
+
+    <ul class="breadcrumb">
+      <li><a routerLink="/">Dashboard</a></li>
+      <li><a routerLink="/search">Search</a></li>
+      <li>Profile</li>
+    </ul><br />
+
+
+    <div class="profile-container center" *ngIf="user">
+      <img src="{{user.avatar_url}}" class="profile-img" />
+      <div class="profile-login">{{user.name || user.login}}</div>
+      <span>(<a href="{{user.html_url}}" target="__blank">Github Profile</a>)</span><br /><br />
+      <span *ngIf="user.bio" class="profile-bio">{{user.bio}}</span>
+      <br /><br /><br />
+
+      <div class="flexRow">
+        <div class="flexItem">
+          <strong>Followers: </strong> {{user.followers || 0}}
+        </div>
+        <div class="flexItem">
+          <strong>Following: </strong> {{user.following || 0}}
+        </div>
+        <div class="flexItem">
+          <strong>Gist: </strong> {{user.public_gist || 0}}
+        </div>
+        <div class="flexItem">
+          <strong>Repos: </strong> {{user.public_repos || 0}}
+        </div>
+      </div>
+      <br /><br /><br /><br />
+      <div class="flexRow">
+        <div class="flexItem w480">
+          <strong>Last Updated</strong><br /> {{user.updated_at | date:'medium'}}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

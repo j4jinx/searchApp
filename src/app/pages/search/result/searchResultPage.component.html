@@ -1,0 +1,30 @@
+<!-- Toolbar -->
+<app-toolbar [title]="title"></app-toolbar>
+
+
+<div class="app-content  animate-opacity" role="main">
+  <div class="hasBoth">
+
+    <ul class="breadcrumb">
+      <li><a routerLink="/">Dashboard</a></li>
+      <li><a routerLink="/search">Search</a></li>
+      <li>Result</li>
+    </ul><br />
+
+
+    <div class="list-container">
+      <ul class="user-list" *ngFor="let user of users">
+        <li class="user-list-item">
+          <img src="{{user.avatar_url}}" class="user-list-item-img" />
+          <div class="user-list-item-info">
+            <span class="user-list-item-info-login">{{user.login}}</span><br />
+            <span>
+              <a class="user-list-item-info-link" routerLink="/search/profile/{{user.login}}">View Profile</a>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

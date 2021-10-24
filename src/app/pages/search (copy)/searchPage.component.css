@@ -1,0 +1,98 @@
+h2 {
+  margin: 0;
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: 16px;
+}
+
+.center {
+  text-align: center;
+}
+
+.search-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+}
+
+
+.search-button {
+  border: none;
+  padding: 8px 16px;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-block;
+  color: #3f51b5;
+  background-color: #e8eaf6;
+  margin-left: 8px;
+}
+
+.search-button:hover {
+  background-color: #3f51b5 !important;
+  color: #e8eaf6 !important
+}
+
+.search-input {
+  padding: 8px;
+  display: inline-block;
+  border: none;
+  border: 1px solid #ccc;
+  width: 240px;
+}
+
+.list-container {
+  padding: 0.01em 8px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.user-list-item {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  overflow: hidden;
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+.user-list-item-img {
+  padding: 8px;
+  float: left;
+  width: 72px;
+  border: none;
+  display: block;
+  outline: 0;
+}
+
+.user-list-item-info {
+  padding: 8px 16px;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0;
+}
+
+.user-list-item-info-login {
+  font-size: 22px !important;
+  text-transform: capitalize;
+}
+
+.user-list-item-info-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #3f51b5;
+}

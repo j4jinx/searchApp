@@ -1,0 +1,32 @@
+<!-- Toolbar -->
+<app-toolbar [title]="title"></app-toolbar>
+
+
+<div class="app-content  animate-opacity" role="main">
+  <div class="hasBoth">
+
+    <div class="flexRow">
+      <div class="flexItem w320">
+        <div class="app-card">
+          <div class="card-container">
+            <img src="assets/icons/person_search.png" alt="Search User" class="card-img">
+            <p>Search for Github User</p>
+          </div>
+          <a class="card-button" routerLink="search">Search User</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flexRow">
+      <div class="flexItem w320">
+        <div class="app-card">
+          <div class="card-container">
+            <img src="assets/icons/history.png" alt="Search History" class="card-img">
+            <p>View past search history</p>
+          </div>
+          <a class="card-button" routerLink="history">Search History</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

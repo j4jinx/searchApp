@@ -1,0 +1,35 @@
+<!-- Toolbar -->
+<app-toolbar [title]="title"></app-toolbar>
+
+
+<div class="app-content  animate-opacity" role="main">
+  <div class="hasBoth">
+
+    <ul class="breadcrumb">
+      <li><a routerLink="/">Dashboard</a></li>
+      <li>History</li>
+    </ul><br />
+
+    <div class="history-container">
+      <button *ngIf="histories.length" (click)="removeAll()" class="history-link btn">Delete All
+        History</button><br /><br />
+
+      <ul class="history-list" *ngFor="let history of histories">
+        <li class="history-list-item">
+          <span (click)="removeHistory(history)" class="history-close">×</span>
+
+          <div class="history-info">
+            <span class="history-name">{{history}}</span><br />
+            <span>
+              <a class="history-link" routerLink="/search/result/{{history}}">View Result</a>
+            </span>
+          </div>
+        </li>
+      </ul>
+
+      <div *ngIf="!histories.length" class="history-name center">No search history found!</div>
+    </div>
+
+
+  </div>
+</div>

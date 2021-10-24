@@ -1,1 +1,189 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+________________________________________________ RESET */
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+
+
+/*
+________________________________________________ APP */
+
+body {
+  background-color: #fafafa;
+  color: #212121;
+  font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+}
+
+.app-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+}
+
+
+.hasTop {
+  padding-top: 64px;
+}
+
+.hasBottom {
+  padding-bottom: 72px;
+}
+
+.hasBoth {
+  padding-top: 64px;
+  padding-bottom: 72px;
+}
+
+/*
+________________________________________________ THEME */
+
+/*---- PRIMARY ----*/
+.app-primary {
+  color: #fff !important;
+  background-color: #3f51b5 !important
+}
+
+.app-text-primary {
+  color: #3f51b5 !important
+}
+
+.app-border-primary {
+  border-color: #3f51b5 !important
+}
+
+/*--- SECONDARY ----*/
+.app-secondary {
+  color: #fff !important;
+  background-color: #e91e63 !important
+}
+
+.app-text-secondary {
+  color: #e91e63 !important
+}
+
+.app-border-secondary {
+  border-color: #e91e63 !important
+}
+
+
+
+/*_________________________________________ Flex GRID*/
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.flexRow.justifyLeft {
+  justify-content: flex-start !important;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  align-content: stretch !important;
+  max-width: 100%;
+}
+
+/*____ FlexItem */
+.flexItem {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin: 0.25rem 0.5rem;
+}
+
+
+.flexItem.w140,
+.flexItem.w320,
+.flexItem.w480 {
+  margin: 0 auto;
+}
+
+.flexItem.w140 {
+  width: 140px;
+}
+
+.flexItem.w320 {
+  width: 320px;
+}
+
+.flexItem.w480 {
+  width: 480px;
+}
+
+.flexItem.responsive {
+  width: 100%;
+}
+
+
+/*_________________________________________ ANIMATION OPACITY*/
+.animate-opacity {
+  animation: opac 0.8s
+}
+
+@keyframes opac {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/*_________________________________________ Breadcrumbs*/
+ul.breadcrumb {
+  padding: 4px 16px;
+  list-style: none;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 14px;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}

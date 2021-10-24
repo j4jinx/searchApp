@@ -1,0 +1,27 @@
+<!-- Toolbar -->
+<app-toolbar [title]="title"></app-toolbar>
+
+
+<div class="app-content  animate-opacity" role="main">
+  <div class="hasBoth">
+
+    <ul class="breadcrumb">
+      <li><a routerLink="/">Dashboard</a></li>
+      <li>Search</li>
+    </ul><br /><br />
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate class="search-form center">
+      <p>
+        <input name="query" class="search-input" type="text" placeholder="Type here..." ngModel #query="ngModel"
+          minlength="2" required />
+
+      </p>
+      <p>
+
+        <button class="search-button">Search</button>
+      </p>
+    </form>
+
+
+  </div>
+</div>
