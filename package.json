@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development"
-  },
-  "private": true,
+  }, 
   "dependencies": {
     "@angular/animations": "~12.2.0",
     "@angular/common": "~12.2.0",
